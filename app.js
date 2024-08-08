@@ -22,6 +22,7 @@ const doctorInfo = require("./api/Doctor/route");
 const patientInfo = require("./api/Patient/route");
 const signin = require("./api/Signin/route");
 const country = require("./api/Country/route");
+const cron = require("./api/CronJob/controller");
 
 //public route
 app.get("/", () => {

@@ -9,14 +9,14 @@ const redisClient = redis.createClient({
 });
 
 redisClient.on("connect", function () {
-  console.log("Connected to Redis qwe");
+  console.log("Connected to Redis ");
 });
 
 redisClient.on("error", function (err) {
   console.log("Redis error: " + err);
 });
 
-redisClient.connect();
+// redisClient.connect();
 
 const getCountrys = async (req, res) => {
   const countrys = "countrys";
