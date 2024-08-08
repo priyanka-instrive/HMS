@@ -5,7 +5,6 @@ const jwt = require("../../system/middleware/jwt");
 
 const signin = async (req, res) => {
   const { email, password } = req.body;
-  console.log("req.body==>>", req.body);
   const user = await service.findUser(email);
   if (!user) {
     return res.status(400).json("Invalid Credintial.");

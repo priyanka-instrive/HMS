@@ -21,6 +21,7 @@ const appoinmentInfo = require("./api/Appoinment/route");
 const doctorInfo = require("./api/Doctor/route");
 const patientInfo = require("./api/Patient/route");
 const signin = require("./api/Signin/route");
+const country = require("./api/Country/route");
 
 //public route
 app.get("/", () => {
@@ -34,6 +35,7 @@ app.use("/", signin);
 app.use(auth.authenticate);
 
 app.use("/user", appoinmentInfo);
+app.use("/country", country);
 
 app.listen(3000, () => {
   console.log("Server Is Running On " + 3000);
